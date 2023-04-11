@@ -115,7 +115,7 @@ def grading_sheets_generator(df_split):
         worksheet = writer.sheets['Sheet1']
 
         border_fmt = workbook.add_format({'bottom':1, 'top':1, 'left':1, 'right':1})
-        worksheet.conditional_format(xlsxwriter.utility.xl_range(0, 0, len(df), len(df.columns - 1)), {'type': 'no_errors', 'format': border_fmt})
+        worksheet.conditional_format(xlsxwriter.utility.xl_range(0, 0, len(df), len(df.columns)-1), {'type': 'no_errors', 'format': border_fmt})
 
         writer.save()
 
